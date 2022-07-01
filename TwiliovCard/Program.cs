@@ -19,7 +19,7 @@ vCard vCardData = new vCard();
 vCardData.FamilyName = "Campos";
 vCardData.GivenName = "Néstor";
 vCardData.PhoneNumbers = new List<TelephoneNumber>();
-vCardData.PhoneNumbers.Add(new TelephoneNumber { Type = TelephoneNumberType.Work, Value = "+56982505514", CustomTypeName = "Main contact" });
+vCardData.PhoneNumbers.Add(new TelephoneNumber { Type = TelephoneNumberType.Work, Value = "<phone number>", CustomTypeName = "Main contact" });
 
 string serializedvCardData = Serializer.Serialize(vCardData);
 
