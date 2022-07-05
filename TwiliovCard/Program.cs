@@ -9,11 +9,12 @@ IConfigurationRoot configuration = new ConfigurationBuilder()
     .AddUserSecrets<Program>()
     .Build();
 
+string[] arguments = Environment.GetCommandLineArgs();
+
 string twilioAccountSID = configuration["TwilioAccountSID"];
 string twilioAuthToken = configuration["TwilioAuthToken"];
-string serverUrl = "<ngrok URL>";
-
-string vCardFolder = @"<folder>";
+string serverUrl = arguments[1];
+string vCardFolder = arguments[2];
 
 vCard vCardData = new vCard();
 vCardData.FamilyName = "Campos";
